@@ -5,12 +5,8 @@ with open("input.txt", "r") as f:
         a[int(i)] += 1
     for day in range(257):
         b = a.copy()
-        a[0] = b[1]
-        a[1] = b[2]
-        a[2] = b[3]
-        a[3] = b[4]
-        a[4] = b[5]
-        a[5] = b[6]
+        for i in range(1, 7):
+            a[i-1] = b[i]
         a[6] = b[7] + b[0]
         a[7] = b[8]
         a[8] = b[0]
